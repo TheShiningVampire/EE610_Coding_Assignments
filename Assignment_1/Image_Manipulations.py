@@ -142,3 +142,51 @@ def Gaussian_Mask(size, std):
     Z = np.exp(-(X**2 + Y**2)/(2*std**2))
     kernel = Z / np.sum(Z)
     return kernel
+
+##################################################################################
+# # SHARPEN THE IMAGE # # 
+###################################################################################   
+
+# Fuunction to sharpen a given image
+def Sharpen(im,sharpness):
+    img_bgr =  im                                                                       # Read the image using OpenCV 2 library 
+    img_hsv = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2HSV)                                  # Convert the image to HSV
+    h, s, v = cv2.split(img_hsv)                                                        # Splitting the HSV image into its three channels
+    image_blurred = GaussianBlur(img_bgr,3,2)                                           # Apply Gaussian blur to the image
+    image_blurred_hsv = cv2.cvtColor(image_blurred, cv2.COLOR_BGR2HSV)                  # Convert the blurred image to HSV
+    h_blurred, s_blurred, v_blurred = cv2.split(image_blurred_hsv)                      # Splitting the HSV image into its three channels
+    v_blurred = np.float32(v_blurred)                                                   # Convert the V channel to float
+    
+    v_sharp = v + (v - v_blurred) * sharpness                                           # Add the sharpness to the V channel
+    # Normalize v_sharp
+    v_sharp = 255* v_sharp / np.max(v_sharp)
+    v_sharp = np.uint8(v_sharp)
+    img_sharpened_hsv = cv2.merge((h, s, v_sharp))                                      # Merge the HSV channels back together
+    img_sharpened = cv2.cvtColor(img_sharpened_hsv, cv2.COLOR_HSV2BGR)                 # Convert the sharpened image back to BGR
+   
+    return img_sharpened
+
+
+##################################################################################
+## CONTRAST STRECHING ##
+##################################################################################
+
+# Function to implement contrast stretching
+def Contrast_Stretching(im):
+    img_bgr = im                                                                        # Read the image using OpenCV 2 library
+    img_hsv = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2HSV)                                  # Convert the image to HSV
+    h, s, v = cv2.split(img_hsv)                                                        # Splitting the HSV image into its three channels
+    v = np.float32(v)                                                                   # Convert the V channel to float
+    v_max = np.max(v)                                                                   # Get the maximum value of the V channel
+    v_min = np.min(v)                                                                   # Get the minimum value of the V channel
+    v_new = (255*(v - v_min)/(v_max - v_min))                                           # Calculate the new V channel
+    v_new = np.uint8(v_new)                                                             # Convert the new V channel to 8 bit
+    img_new_hsv = cv2.merge((h, s, v_new))                                              # Merge the HSV channels back together
+    img_new = cv2.cvtColor(img_new_hsv, cv2.COLOR_HSV2BGR)                             # Convert the new HSV image back to BGR
+
+    return img_new
+
+
+##################################################################################
+## END OF FILE ##
+##################################################################################

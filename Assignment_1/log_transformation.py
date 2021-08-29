@@ -25,10 +25,8 @@ def Log_Transformation(path):
 # %%
 
 path = r'Images\house.tiff'
-img_rgb, img2 = Log_Transformation(path) 
-cv2.imshow("Original Image", img_rgb)
+mg2 = Log_Transformation(path) 
 cv2.imshow("Log Transformed Image", img2)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-# %%
