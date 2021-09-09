@@ -1,3 +1,6 @@
+"""
+Code to check if the histogram of noisy image shown in lecture is correct
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
