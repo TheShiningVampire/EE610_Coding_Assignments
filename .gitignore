@@ -1,7 +1,3 @@
-Practice/noisy.png
-Practice/__pycache__/preview/Matplotlib/img.png
-Practice/__pycache__/preview/Matplotlib/noise.png
-Practice/__pycache__/preview/Matplotlib/noisy.png
-Practice/__pycache__/preview/OpenCV/img.png
-Practice/__pycache__/preview/OpenCV/noise.png
-Practice/__pycache__/preview/OpenCV/noisy.png
+*.png
+*.jpg
+*.jpeg
