@@ -1,4 +1,3 @@
-# %% 
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
@@ -9,20 +8,6 @@ cv2.rectangle(img, (100, 100), (400, 400), 100, -1)
 cv2.circle(img, (256, 256), 100, 200, -1)
 # Save the images
 cv2.imwrite('rectangle.png', img)
-
-# Make histogram of the image
-hist = cv2.calcHist([img], [0], None, [256], [0, 256])
-plt.plot(hist)
-plt.show()
-# %% 
-# Add gaussian noise to the image
-noise = np.random.normal(0, 10, img.shape)
-noisy = img + noise
-# Remoce negative values
-noisy = np.abs(noisy)
-# Remove values greater than 255
-noisy = np.where(noisy > 255, 255, noisy)
-cv2.imwrite('noisy.png', noisy)
 
 # histogram of the numpy array
 def Histogram(im):
@@ -37,11 +22,25 @@ def Histogram(im):
     plt.plot(hist_)
     plt.show()
 
+
+# Make histogram of the image
+Histogram(img)
+    
+# Add gaussian noise to the image
+noise = np.random.normal(0, 10, img.shape)
+noisy = img + noise
+# Remove negative values
+noisy = np.abs(noisy)
+# Remove values greater than 255
+noisy = np.where(noisy > 255, 255, noisy)
+cv2.imwrite('noisy.png', noisy)
+
+
 Histogram(noise)
-# %%
+   
 
 # Histogram of the noisy image
 Histogram(noisy)
 
 
-# %%
+   
