@@ -1,47 +1,53 @@
-backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work
+autopep8==1.5.7
+backcall==0.2.0
 Bottleneck==1.3.2
 certifi==2021.5.30
 click==7.1.2
-colorama @ file:///tmp/build/80754af9/colorama_1607707115595/work
+colorama==0.4.4
 cycler==0.10.0
-decorator @ file:///tmp/build/80754af9/decorator_1621259047763/work
-ipykernel @ file:///C:/ci/ipykernel_1596190155316/work/dist/ipykernel-5.3.4-py3-none-any.whl
-ipython @ file:///C:/ci/ipython_1628244008373/work
-ipython-genutils @ file:///tmp/build/80754af9/ipython_genutils_1606773439826/work
-jedi @ file:///C:/ci/jedi_1611315808330/work
-jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1616770841739/work
-jupyter-core @ file:///C:/ci/jupyter_core_1612213356021/work
+decorator==5.0.9
+ipykernel==5.3.4
+ipython==7.26.0
+ipython-genutils==0.2.0
+jedi==0.18.0
+jupyter-client==6.1.12
+jupyter-core==4.7.1
 kiwisolver==1.3.1
 matplotlib==3.4.3
-matplotlib-inline @ file:///tmp/build/80754af9/matplotlib-inline_1628242447089/work
+matplotlib-inline==0.1.2
 mkl-fft==1.3.0
-mkl-random @ file:///C:/ci/mkl_random_1626186184278/work
+mkl-random==1.2.2
 mkl-service==2.4.0
-numexpr @ file:///C:/ci/numexpr_1618856738664/work
+numexpr==2.7.3
 numpy==1.21.2
 opencv-python==4.5.3.56
-pandas @ file:///C:/ci/pandas_1627570330330/work
-parso @ file:///tmp/build/80754af9/parso_1617223946239/work
-pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
+pandas==1.3.1
+parso==0.8.2
+pickleshare==0.7.5
 Pillow==8.3.1
-prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1616415428029/work
-Pygments @ file:///tmp/build/80754af9/pygments_1621606182707/work
+pip==21.0.1
+prompt-toolkit==3.0.17
+pycodestyle==2.7.0
+Pygments==2.9.0
 pyparsing==2.4.7
 PyQt5==5.15.4
 pyqt5-plugins==5.15.4.2.2
 PyQt5-Qt5==5.15.2
 PyQt5-sip==12.9.0
 pyqt5-tools==5.15.4.3.2
-python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+python-dateutil==2.8.2
 python-dotenv==0.19.0
-pytz @ file:///tmp/build/80754af9/pytz_1612215392582/work
+pytz==2021.1
 pywin32==228
-pyzmq @ file:///C:/ci/pyzmq_1628276144921/work
+pyzmq==22.2.1
 qt5-applications==5.15.2.2.2
 qt5-tools==5.15.2.1.2
 rope==0.19.0
-six @ file:///tmp/build/80754af9/six_1623709665295/work
-tornado @ file:///C:/ci/tornado_1606942392901/work
-traitlets @ file:///home/ktietz/src/ci/traitlets_1611929699868/work
-wcwidth @ file:///tmp/build/80754af9/wcwidth_1593447189090/work
+setuptools==52.0.0.post20210125
+six==1.16.0
+toml==0.10.2
+tornado==6.1
+traitlets==5.0.5
+wcwidth==0.2.5
+wheel==0.37.0
 wincertstore==0.2

@@ -1,0 +1,11 @@
+Run the following commands
+
+pip install opencv-python
+pip install PyQt5
+pip install matplotlib
+
+This installs the required packages
+
+Then run
+
+python GUI.py
